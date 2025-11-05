@@ -64,6 +64,7 @@ public class OrderService {
 
         order.setCategory(orderDTO.getCategory());
 
+
         order.setTotalamount(orderDTO.getTotalamount());
         order.setItemscount(orderDTO.getItemscount());
         order.setPayementmethod(orderDTO.getPayementmethod());

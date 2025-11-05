@@ -18,6 +18,9 @@ public class UserService {
     public UserEntity PostUserService(UserDTO userDTO){
         UserEntity user=new UserEntity();
         System.out.println(userDTO.getUserid());
+        user.setType(userDTO.getType());
+        user.setAdminpasscode(userDTO.getAdminpasscode());
+        user.setCreateadminpass(userDTO.getCreateadminpass());
         user.setId(userDTO.getUserid());
         user.setName(userDTO.getName());
         user.setAge(userDTO.getAge());

@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "http://localhost:5173")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -36,6 +36,7 @@ public class UserController {
 
     @PostMapping("/users")
     public UserEntity createUser(@RequestBody UserDTO userDTO) {
+        System.out.println(userDTO);
         return userService.PostUserService(userDTO);
 
     }

@@ -27,6 +27,8 @@ public class OrderEntity {
     private String payementmethod;
 
 
+
+
     @CreatedDate
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") // For form binding
@@ -92,6 +94,7 @@ public class OrderEntity {
         this.status = status;
         this.user = user;
     }
+
 
     public String getName() {
         return name;
@@ -188,4 +191,6 @@ public class OrderEntity {
     public void setUser(UserEntity user) {
         this.user = user;
     }
+
+
 }
