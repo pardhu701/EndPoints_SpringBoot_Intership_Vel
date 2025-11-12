@@ -76,4 +76,14 @@ public class OrderService {
         return orderRepository.save(order);
 
     }
+
+    @Transactional
+    public void deleteOrder(String idN) {
+        Optional<OrderEntity> order=orderRepository.findByIdN(idN);
+        if (order.isEmpty()) {
+            throw new RuntimeException("Order not found: ");
+        }
+        orderRepository.deleteByIdN(idN);
+
+    }
 }

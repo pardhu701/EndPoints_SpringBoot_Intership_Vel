@@ -17,6 +17,7 @@ public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "idN", unique = true, nullable = false)
     private String idN;
 
     private String name;
@@ -25,6 +26,7 @@ public class OrderEntity {
     private Double totalamount;
     private Integer itemscount;
     private String payementmethod;
+
 
 
 

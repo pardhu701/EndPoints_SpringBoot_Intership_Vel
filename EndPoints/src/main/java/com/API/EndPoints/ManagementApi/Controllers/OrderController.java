@@ -8,6 +8,7 @@ import com.API.EndPoints.ManagementApi.Repository.OrderRepository;
 import com.API.EndPoints.ManagementApi.Service.OrderService;
 import org.hibernate.query.Order;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,6 +39,12 @@ public class OrderController {
     @PutMapping("/orders/{id}")
     public OrderEntity putChange(@PathVariable Long id, @RequestBody OrderPutDTO orderDTO){
         return orderService.putChange(id,orderDTO);
+    }
+
+    @DeleteMapping("/orders/{idN}")
+    public ResponseEntity<Void> deleteOrder(@PathVariable String idN){
+        orderService.deleteOrder(idN);
+        return ResponseEntity.noContent().build();
     }
 
 
